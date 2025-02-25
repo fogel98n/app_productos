@@ -1,0 +1,54 @@
+.contenedor-principal {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contenedor {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, border 0.3s;
+}
+
+.contenedor img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.contenedor p {
+    margin: 10px 0;
+}
+
+.contenedor button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contenedor button:hover {
+    background-color: #0056b3;
+}
+
+.contenedor:hover {
+    border: 2px solid blue;
+    transform: scale(1.05);
+}
