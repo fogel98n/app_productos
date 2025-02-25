@@ -1,27 +1,25 @@
-export function header() {
- 
-    let header = document.createElement("header");
-    header.className = "header";
+export function item(src, descripcion, precio) {
 
+    const contenedor = document.createElement("div");
+    contenedor.className = "contenedor";
+    const imagen = document.createElement("img");
+    imagen.src = src;
+    imagen.alt = descripcion;
+    const descripcionElemento = document.createElement("p");
+    descripcionElemento.textContent = descripcion;
+    const precioElemento = document.createElement("p");
+    precioElemento.textContent = `Precio: $${precio}`;
+    const boton = document.createElement("button");
+    boton.textContent = "eliminar";
+    boton.addEventListener("click", () => {
 
-    const logo = document.createElement("img");
-    logo.src = "https://wallpapercave.com/wp/wp5208821.png";
-    logo.alt = "Logo";
-    logo.className = "logo";
+        contenedor.remove();
 
- 
-    const contadorProductos = document.createElement("span");
-    contadorProductos.id = "contador-productos";
-    contadorProductos.textContent = "5 productos"; 
+    });
+    contenedor.appendChild(imagen);
+    contenedor.appendChild(descripcionElemento);
+    contenedor.appendChild(precioElemento);
+    contenedor.appendChild(boton);
+    return contenedor;
 
-
-    const contenedorLogoContador = document.createElement("div");
-    contenedorLogoContador.className = "contenedor-logo-contador";
-    contenedorLogoContador.appendChild(logo);
-    contenedorLogoContador.appendChild(contadorProductos);
-
-    
-    header.appendChild(contenedorLogoContador);
-
-    return header;
 }
